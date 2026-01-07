@@ -61,7 +61,7 @@ jobs:
 
       - name: Publish
         if: github.event_name != 'push'
-        run: bun publish --access public
+        run: npm publish --access public
 
       - name: Skip publish on push
         if: github.event_name == 'push'
