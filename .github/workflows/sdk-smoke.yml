@@ -12,31 +12,31 @@ jobs:
         include:
           - language: php
             os: ubuntu-latest
-            run: npm run sdk:php
+            run: bun run sdk:php
           - language: ruby
             os: ubuntu-latest
-            run: npm run sdk:ruby
+            run: bun run sdk:ruby
           - language: rust
             os: ubuntu-latest
-            run: npm run sdk:rust
+            run: bun run sdk:rust
           - language: java
             os: ubuntu-latest
-            run: npm run sdk:java
+            run: bun run sdk:java
           - language: swift
             os: macos-latest
-            run: npm run sdk:swift
+            run: bun run sdk:swift
           - language: python
             os: ubuntu-latest
-            run: npm run sdk:python
+            run: bun run sdk:python
           - language: go
             os: ubuntu-latest
-            run: npm run sdk:go
+            run: bun run sdk:go
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 18
-        uses: actions/setup-node@v4
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 18
+          bun-version: latest
       - name: Run smoke for ${{ matrix.language }}
         run: ${{ matrix.run }}

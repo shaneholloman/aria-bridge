@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Use the built output so this script works after `npm run build`.
+// Use the built output so this script works after `bun run build`.
 const { startBridge } = require('../dist/index.js');
 
 const workspace = process.argv[2] || process.env.ARIA_WORKSPACE || process.cwd();

@@ -25,11 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 18
+          bun-version: latest
       - name: Install ws for protocol host
-        run: npm install ws@8
+        run: bun add ws@8
         working-directory: ruby/tests
       - uses: ruby/setup-ruby@v1
         with:
@@ -44,9 +44,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -60,11 +57,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 18
+          bun-version: latest
       - name: Install ws for protocol host
-        run: npm install ws@8
+        run: bun add ws@8
         working-directory: java/src/test/resources
       - uses: actions/setup-java@v4
         with:
@@ -79,11 +76,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 18
+          bun-version: latest
       - name: Install ws for protocol host
-        run: npm install ws@8
+        run: bun add ws@8
         working-directory: php/tests
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -101,11 +98,11 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 18
+          bun-version: latest
       - name: Install ws for protocol host
-        run: npm install ws@8
+        run: bun add ws@8
         working-directory: swift/Tests
       - name: Run Swift parity tests
         working-directory: swift
