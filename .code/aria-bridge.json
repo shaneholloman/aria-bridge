@@ -1,0 +1,9 @@
+{
+  "url": "ws://127.0.0.1:9876",
+  "port": 9876,
+  "secret": "8e9cbd45b8540f0679d384e0066446b276e502eb552c6f7eac427c3db0295577",
+  "workspacePath": "/Users/shaneholloman/git/_sources/_shaneholloman/aria-bridge",
+  "startedAt": "2026-01-06T22:21:30.537Z",
+  "pid": 29122,
+  "heartbeatAt": "2026-01-07T01:31:37.756Z"
+}
